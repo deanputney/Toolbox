@@ -20,6 +20,9 @@
       .section{
         margin-bottom:20px;
       }
+      pre {
+        margin-top:20px;
+      }
     </style>
     
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"> </script>
@@ -27,6 +30,10 @@
       $(document).ready(function(){
         $('.section').each(function(){
           $(this).append("<pre><code>herp</code></pre>");
+          code = $(this, 'code');
+          $(this, 'a').each(function(code){
+            code.append($(this).href+"\n");
+          })
         });
       });
     </script>
@@ -53,10 +60,6 @@
           <a href="http://www.awayback.com/revised-font-stack/">Revised Font Stack</a><br/>
           <a href="http://www.mikaeleidenberg.se/page/free-iphone-template">iPhone PSD template</a><br/>
           <a href="http://subtlepatterns.com/">Subtle Patterns</a><br/>
-          <pre><code>
-            http://twitter.github.com/bootstrap/
-            http://bootswatch.com/
-          </code></pre>
         </div>
 
         <div class="section">
