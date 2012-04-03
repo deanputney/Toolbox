@@ -29,7 +29,7 @@
     <script type="text/javascript">
       $(document).ready(function(){
         $('.section').each(function(){
-          $(this).append("<pre><code></code></pre>");
+          $(this).append('<div class=""><small><a href="javascript:void(0);">show bookmark code</a></small><pre><code></code></pre></div>');
           var code = $('code', this);
           $('a', this).each(function(){
             console.log($(this).attr("href"));
