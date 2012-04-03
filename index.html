@@ -36,6 +36,9 @@
             code.append($(this).attr("href")+"\n");
           })
         });
+        $('.section a').each(function(){
+          $('#bookmark-all code').append($(this).attr("href")+"\n");
+        });
       });
     </script>
   </head>
@@ -156,6 +159,10 @@
           <a href="http://cl.ly/5nAo">OSS Licenses Flowchart</a> A simple flowchart for helping you understand and pick a good open source license.<br/>
           <a href="http://mapbox.com/tilemill/">TileMill</a><br/>
           <a href="https://github.com/plamoni/SiriProxy">SiriProxy</a><br/>
+        </div>
+        
+        <div id="bookmark-all" class="section">
+          <pre><code></code></pre>
         </div>
         
         <!-- <h3>Welcome to GitHub Pages.</h3>
