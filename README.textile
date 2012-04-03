@@ -1,0 +1,7 @@
+<h3>You probably want to be <a href="http://mustardhamsters.github.com/Toolbox/">viewing the Github Page for this</a> unless you're forking it yourself.</h3>
+
+<i>"Oh, you mean like this thing?"</i>
+
+I get asked about specific tools or how to best tackle specific tasks on a regular basis, and usually I just give people a resource from my toolbox that accomplishes what they want. This is a place for me to keep all the really important links that everyone should just KNOW about and to give me a place to point to when I need to give someone a large knowledge dump quickly or just a place to start.
+
+If you have your own useful tools like this, please feel free to fork this repository and contribute.
