@@ -32,8 +32,8 @@
           $(this).append("<pre><code>herp</code></pre>");
           var code = $(this, 'code');
           $('a', this).each(function(){
-            console.log($(this).href);
-            code.append($(this).href+"\n");
+            console.log($(this).attr("href"));
+            code.append($(this).attr("href")+"\n");
           })
         });
       });
