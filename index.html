@@ -30,7 +30,7 @@
       $(document).ready(function(){
         $('.section').each(function(){
           $(this).append("<pre><code>herp</code></pre>");
-          var code = $(this, 'code');
+          var code = $('code', this);
           $('a', this).each(function(){
             console.log($(this).attr("href"));
             code.append($(this).attr("href")+"\n");
