@@ -30,7 +30,7 @@
       $(document).ready(function(){
         $('.section').each(function(){
           $(this).append("<pre><code>herp</code></pre>");
-          global code = $(this, 'code');
+          var code = $(this, 'code');
           $(this, 'a').each(function(){
             code.append($(this).href+"\n");
           })
