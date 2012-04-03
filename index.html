@@ -40,7 +40,9 @@
           })
         });
         $('.section a').each(function(){
-          $('#bookmark-all code').append($(this).attr("href")+"\n");
+          if($(this).attr("href") != "javascript:void(0);"){
+            $('#bookmark-all code').append($(this).attr("href")+"\n");
+          }
         });
         $('.bookmark-code a').click(function(){
           console.log('herp');
