@@ -44,6 +44,7 @@
         });
         $('.bookmark-code a').click(function(){
           console.log('herp');
+          console.log($(this).siblings('pre'));
           $(this).siblings('pre').toggle();
         });
       });
