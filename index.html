@@ -17,11 +17,14 @@
       h1, h2, h3, h4, h5, h6 {
         margin-bottom:10px;
       }
-      .section{
+      .section {
         margin-bottom:20px;
       }
       pre {
         margin-top:20px;
+      }
+      .bookmark-code pre {
+        display:none;
       }
     </style>
     
@@ -29,7 +32,7 @@
     <script type="text/javascript">
       $(document).ready(function(){
         $('.section').each(function(){
-          $(this).append('<div class=""><small><a href="javascript:void(0);">show bookmark code</a></small><pre><code></code></pre></div>');
+          $(this).append('<div class="bookmark-code"><small><a href="javascript:void(0);">show bookmark code</a></small><pre><code></code></pre></div>');
           var code = $('code', this);
           $('a', this).each(function(){
             console.log($(this).attr("href"));
@@ -38,6 +41,9 @@
         });
         $('.section a').each(function(){
           $('#bookmark-all code').append($(this).attr("href")+"\n");
+        });
+        $('.bookmark-code a').click(function(){
+          $(this).siblings('pre').toggle();
         });
       });
     </script>
