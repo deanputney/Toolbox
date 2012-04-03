@@ -1,5 +1,7 @@
 <h3>You probably want to be <a href="http://mustardhamsters.github.com/Toolbox/">viewing the Github Page for this</a> unless you're forking it yourself.</h3>
 
-<p>This is a place for me to keep all the really important links that everyone should just KNOW about. I get asked about specific tools or things people should use regularly, and usually I just give people a resource from my toolbox that accomplishes what they want. "Oh, you mean like this thing?"
+<p><i>"Oh, you mean like this thing?"</i>
+
+<p>This is a place for me to keep all the really important links that everyone should just KNOW about. I get asked about specific tools or how to best tackle specific tasks on a regular basis, and usually I just give people a resource from my toolbox that accomplishes what they want. 
 
 <p>
