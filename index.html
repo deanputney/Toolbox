@@ -31,7 +31,8 @@
         $('.section').each(function(){
           $(this).append("<pre><code>herp</code></pre>");
           var code = $(this, 'code');
-          $(this, 'a').each(function(){
+          $('a', this).each(function(){
+            console.log($(this).href);
             code.append($(this).href+"\n");
           })
         });
