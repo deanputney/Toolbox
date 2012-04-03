@@ -32,7 +32,7 @@
     <script type="text/javascript">
       $(document).ready(function(){
         $('.section').each(function(){
-          $(this).append('<div class="bookmark-code"><small><a href="javascript:void(0);">show bookmark code</a></small><pre><code></code></pre></div>');
+          $(this).append('<div class="bookmark-code"><a href="javascript:void(0);"><small>show bookmark code</small></a><pre><code></code></pre></div>');
           var code = $('code', this);
           $('a', this).each(function(){
             console.log($(this).attr("href"));
