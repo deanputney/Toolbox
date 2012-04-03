@@ -43,6 +43,7 @@
           $('#bookmark-all code').append($(this).attr("href")+"\n");
         });
         $('.bookmark-code a').click(function(){
+          console.log('herp');
           $(this).siblings('pre').toggle();
         });
       });
