@@ -36,6 +36,9 @@
             code.append($(this).attr("href")+"\n");
           })
         });
+        $('.section a').each(function(){
+          $('#bookmark-all code').append($(this).attr("href")+"\n");
+        });
       });
     </script>
   </head>
