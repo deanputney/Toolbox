@@ -12,12 +12,61 @@
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    
+    <style type="text/css">
+      body {
+        color:#555;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        margin-bottom:10px;
+      }
+      .section {
+        margin-bottom:20px;
+      }
+      pre {
+        margin-top:5px;
+      }
+      .bookmark-code pre {
+        display:none;
+      }
+      #tool-logo {
+        background:url(swiss_army_knife.svg);
+      }
+    </style>
+    
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"> </script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('.section').each(function(){
+          $(this).append('<div class="bookmark-code"><small><a href="javascript:void(0);">show bookmark code</a></small><pre><code></code></pre></div>');
+          var code = $('code', this);
+          $('a', this).each(function(){
+            if($(this).attr("href") != "javascript:void(0);"){
+              code.append($(this).attr("href")+"\n");
+            }
+          })
+        });
+        $('.section a').each(function(){
+          if($(this).attr("href") != "javascript:void(0);"){
+            $('#bookmark-all code').append($(this).attr("href")+"\n");
+          }
+        });
+        $('.bookmark-code a').click(function(){
+          console.log('herp');
+          console.log($(this).parent().siblings('pre'));
+          $(this).parent().siblings('pre').toggle();
+        });
+      });
+    </script>
   </head>
   <body>
     <div class="wrapper">
       <header>
-        <h1>Toolbox</h1>
-        <p>A collection of critical links for software and business development</p>
+        <h1><span id="tool-logo"></span> Toolbox</h1>
+        <p>A collection of critical links for software and business development.</p>
+        <p>Some projects copied into the master branch for easy checkout.<br/>
+        <small>Add a new one with</small></p>
+        <pre style="margin-top:-15px; padding:5px 10px;"><code><small>git submodule add url projectname</small></code></pre>
         <p class="view"><a href="https://github.com/mustardhamsters/Toolbox">View the Project on GitHub <small>mustardhamsters/Toolbox</small></a></p>
         <ul>
           <li><a href="https://github.com/mustardhamsters/Toolbox/zipball/master">Download <strong>ZIP File</strong></a></li>
@@ -26,35 +75,122 @@
         </ul>
       </header>
       <section>
-        <h3>Welcome to GitHub Pages.</h3>
+        <div class="section">
+          <h2>Design Tools</h2>
+          <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a><br/>
+          <a href="http://bootswatch.com/">Bootswatch</a><br/>
+          <a href="http://0to255.com/">0to255</a><br/>
+          <a href="http://losttype.com/browse/">Lost Type</a><br/>
+          <a href="http://www.awayback.com/revised-font-stack/">Revised Font Stack</a><br/>
+          <a href="http://www.mikaeleidenberg.se/page/free-iphone-template">iPhone PSD template</a><br/>
+          <a href="http://subtlepatterns.com/">Subtle Patterns</a><br/>
+        </div>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+        <div class="section">
+          <h2>Picture Placeholders</h2>
+          <a href="http://lorempixum.com/">Lorem Pixum</a><br/>
+          <a href="http://placekitten.com/">Place Kitten</a><br/>
+          <a href="http://placesheen.com/">Place Sheen</a><br/>
+        </div>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+        <div class="section">
+          <h2>Icons</h2>
+          <a href="http://thenounproject.com/">The Noun Project</a><br/>
+          <a href="http://glyphish.com/">Glyphish</a><br/>
+        </div>
 
-<h3>Designer Templates</h3>
+        <div class="section">
+          <h2>Command Line Tricks</h2>
+          <a href="http://www.commandlinefu.com/commands/browse/sort-by-votes">Essential command line tricks</a><br/>
+          <a href="http://stackoverflow.com/questions/60367/the-single-most-useful-emacs-feature">Stack Overflow on the single most useful emacs feature</a><br/>
+          <a href="https://gist.github.com/1525217">Starting a server from any directory</a> Listed in the essential command line tricks, but worth mentioning again.<br/>
+          <a href="http://rogerdudler.github.com/git-guide/">The simple guide to git</a> Pretty colors, easy to follow along. Getting people up to speed on git is invaluable, and this is a clean link to send them.<br/>
+        </div>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact support@github.com and we’ll help you sort it out.</p>
+        <div class="section">
+          <h2>Staying Fresh</h2>
+          <a href="http://forrst.com/">Forrst</a> Web developers and designers community, nicely done.<br/>
+          <a href="http://news.ycombinator.com/news">Hacker News</a> Widely known, but whatever.<br/>
+          <a href="http://www.reddit.com/r/web_design">/r/web_design</a> Decent community for web designers.<br/>
+          <a href="http://www.reddit.com/r/web_design/comments/gvbfq/whats_in_your_web_development_toolbox_for_max/">What's in your web development toolbox?</a> /r/web_design thread that's on this very subject.<br/>
+        </div>
+        
+        <div class="section">
+          <h2>Useful Services</h2>
+          <a href="http://www.sounddogs.com/">Sound Dogs</a> Buy sound effects and samples for all kind of stuff. Sound is important.<br/>
+          <a href="http://offliberty.com/">Offliberty</a> Download YouTube, Vimeo and other web content you're not supposed to be able to download.<br/>
+          <a href="http://www.resizer.co/">Resizer</a> API for resizing images on the fly. Handy for testing.<br/>
+          <a href="http://www.fourmilab.ch/webtools/PageRank/">Google PageRank calculator thing</a> ehhh... might want to take this out<br/>
+        </div>
+        
+        <div class="section">
+          <h2>Status Updates</h2>
+          <p>You probably depend on a couple different services or software that is being developed by other people. When things change with those projects, you need to be up to date and informed. These links are for services I use regularly or have used in the past.</p><br/><br/>
+          <a href="http://wpdevel.wordpress.com/">WordPress development blog</a> Describes potential security problems, necessary updates, and what's changing.<br/>
+          <a href="http://status.disqus.com/">Disqus Status</a> Click the "Subscribe to status updates" link at the bottom to get email updates.<br/>
+          <a href="http://code.google.com/status/appengine">Google App Engine Status</a><br/>
+          <a href="http://lab.arc90.com/2008/04/02/svn-notifier/">SVN Notifier</a> Get a Growl notification when your SVN working copy is out of date with the repository.<br/>
+        </div>
+        
+        <div class="section">
+          <h2>Testing and Coding Style Tools</h2>
+          <a href="http://gskinner.com/RegExr/">RegExr</a><br/>
+          <a href="http://jsfiddle.net/">JSFiddle</a><br/>
+          <a href="http://jscompress.com/">JSCompress</a><br/>
+          <a href="http://jsbeautifier.org/">JSBeautifier</a><br/>
+          <a href="http://infohound.net/tidy/">Tidy</a><br/>
+          <a href="http://www.csspivot.com/">CSS Pivot</a><br/>
+        </div>
+        
+        <div class="section">
+          <h2>UI Elements and Plugins</h2>
+          <a href="http://www.workshop.rs/jqbargraph/">jQuery Bar Graph</a><br/>
+          <a href="https://github.com/flot/flot">Flot graphing tools</a><br/>
+          <a href="http://johnpolacek.github.com/scrollorama/">Scrollorama</a><br/>
+          <a href="http://harvesthq.github.com/chosen/">Chosen</a><br/>
+          <a href="http://dipperstove.com/design/css3-progress-bars.html">CSS3 Progress Bars</a><br/>
+          <a href="http://imsky.github.com/cssFx/">cssFx</a><br/>
+          <a href="http://cssprefixer.appspot.com/">CSS prefixer</a><br/>
+          <a href="http://letteringjs.com/">Lettering.js</a><br/>
+          <a href="http://jonthornton.github.com/jquery-timepicker/">jQuery Timepicker</a><br/>
+          <a href="http://masonry.desandro.com/">Masonry</a><br/>
+          <a href="http://aquantum-demo.appspot.com/file-upload">jQuery File Upload</a> Drag and drop file upload. Don't ever do file upload any other way.<br/>
+          <a href="http://jacklmoore.com/notes/css3-ribbon-menu/">CSS3 Ribbon Menu</a><br/>
+          <a href="http://thrivingkings.com/apprise/">Apprise</a><br/>
+          <a href="http://fancybox.net/">FancyBox</a><br/>
+          <a href="http://www.turnjs.com/#home">Turn.js</a><br/>
+          <a href="http://jackrugile.com/jrumble/">jRumble</a><br/>
+          <a href="http://code.google.com/p/hyphenator/">Hyphenator</a><br/>
+          <a href="http://imakewebthings.github.com/jquery-waypoints/">jQuery Waypoints</a><br/>
+        </div>
+        
+        <div class="section">
+          <h2>Documentation</h2>
+          <a href="http://apidock.com/">API Dock</a> Ruby, RSpec and Rails docs that do pretty pretty good<br/>
+          <a href="http://docs.djangoproject.com/en/dev/ref/templates/builtins/?from=olddocs">Django Docs</a><br/>
+          <a href="http://code.google.com/appengine/docs/python/gettingstarted/">Google App Engine Getting Started</a><br/>
+          <a href="http://trac.mcs.anl.gov/projects/bcfg2">bcfg2</a><br/>
+        </div>
+        
+        <div class="section">
+          <h2>Misc Neat/Useful</h2>
+          <a href="https://github.com/marstall/shim">Shim</a><br/>
+          <a href="http://serialized.net/2007/09/quick-lame-tip-concatenate-mp3s/">Lame</a><br/>
+          <a href="http://html5boilerplate.com/">HTML5 Boilerplate</a><br/>
+          <a href="http://cl.ly/5nAo">OSS Licenses Flowchart</a> A simple flowchart for helping you understand and pick a good open source license.<br/>
+          <a href="http://mapbox.com/">MapBox</a> Bitchin' custom maps<br/>
+          <a href="http://mapbox.com/tilemill/">TileMill</a> Make your own custom maps to use with MapBox<br/>
+          <a href="https://github.com/plamoni/SiriProxy">SiriProxy</a><br/>
+        </div>
+        
+        <div id="bookmark-all" class="section">
+          <h2>Bookmark all of these</h2>
+        </div>
       </section>
       <footer>
-        <p>This project is maintained by <a href="https://github.com/mustardhamsters">mustardhamsters</a></p>
+        <p>This project is maintained by <a href="https://github.com/mustardhamsters">Dean Putney</a>, who is totally fucking radical.
+        <br/><small>I run the software for <a href="http://boingboing.net">BoingBoing.net</a> and am available for select web development projects.</small></p>
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
     </div>
